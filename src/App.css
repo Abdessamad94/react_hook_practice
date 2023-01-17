@@ -110,3 +110,21 @@ button.btn-them {
   width: 50px;
   cursor: pointer;
 }
+
+.loader
+{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader[data-theme="dark"]
+{
+  background-color: black;
+}
+.loader[data-theme="dark"] h1
+{
+  color: whitesmoke;
+}

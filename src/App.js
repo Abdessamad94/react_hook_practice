@@ -3,7 +3,9 @@ import useFetch from "./Hooks/useFetch";
 import useLocalStorageState from "./Hooks/useLocalStorageState";
 import Card from "./Component/Card";
 import { useState } from "react";
+import Loader from "./Component/Loader";
 import { BsFillBrightnessHighFill, BsFillMoonStarsFill } from "react-icons/bs";
+
 // import { MdDarkMode } from "react-icons";
 
 function App() {
@@ -11,7 +13,7 @@ function App() {
   const [theme, setTheme] = useLocalStorageState("theme", "light");
   const [qeury, setQeury] = useState("");
 
-  if (isload) return <h1>isload...</h1>;
+  if (isload) return <Loader theme={theme}/>;
   return (
     <div className="App" data-theme={theme}>
       <div className="header">
